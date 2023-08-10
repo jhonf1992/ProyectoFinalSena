@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/estilosNosotros.css">
+    <title>Home Carvajal Mat.</title>
+    <script src="https://kit.fontawesome.com/fb2678fbca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <Header id = "header">
+        <div class="container__header">
+            <div class="logo">
+                <img src="./resources/css/img/Logo Ferreteria.png" alt="">
+            </div>
+            <div class="container__nav">
+                
+                <nav id ="nav">
+                    <ul>
+                        <li><a href="/" >Home</a></li>
+                        <li><a href="nosotros" class="select" >Nosotros</a></li>
+                        <li><a href="productos">Productos</a></li>
+                        <!-- <li><a href="#">Facturar</a></li> -->
+                        <li><a href="contacto">Contacto</a></li>
+                        <!-- <li><a href="#">Despachos</a></li> -->
+                        <% if(login){ %>
+                            <li><a href="logout"><img src="./resources/css/img/mbrilogout_99583.png" alt="Salir" class="exit"></a></li>
+                            <% console.log('Logueado') %>
+                        <% }else{ console.log('No conectado');} %>                    </ul>
+                </nav>
+                <div class="btn__menu" id="btn_menu"><i class="fa-solid fa-bars"></i></div>
+
+            </div>
+        </div>
+    </Header>
+    <main><br>
+        <div class="center"><br>
+            <div class="video">
+                <video src="./resources/css/img/WhatsApp Video 2020-09-01 at 10.40.47 PM.mp4"  controls ></video>
+            </div>
+            <div class="nosotros">
+                <h1>Nuestra Historia</h1>
+                <p class="historia">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, reprehenderit aliquid porro fugiat doloribus assumenda quod, impedit quisquam maiores eos qui, perspiciatis animi nam iusto magnam iure error. Cum, quo?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit voluptates dicta incidunt animi, error commodi nobis possimus odio temporibus, sequi eligendi sunt deleniti? A earum eius quidem esse ipsum? Impedit?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At corporis aliquid, libero cum alias incidunt qui natus suscipit nemo maxime labore ab consequatur, minima vitae ratione quia est, itaque deserunt.
+                </p>
+                
+            </div>
+            <div class="mision_vision">
+                <div class="mision">
+                    <h2>Mision</h2><br>
+                    <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi sapiente laboriosam fuga autem modi officia, non porro. Suscipit praesentium magni dignissimos necessitatibus aut dolore ut, ab maiores amet dolores excepturi?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At quaerat officia rerum sit quam veniam vero. Perspiciatis dolore vitae voluptate unde, hic dolorum vero quasi doloremque a, laudantium sequi amet?
+                        
+                    </p>
+                </div>
+                <div class="vision">
+                    <h2>Vision</h2><br>
+                    <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, quidem possimus recusandae obcaecati in numquam sit quibusdam consequatur rem dignissimos voluptatibus quod soluta, error quisquam odio quam. Quo, quisquam ea.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis optio nam tempore, beatae enim porro perferendis minus distinctio saepe praesentium eos assumenda? Ad, suscipit itaque? Excepturi totam quam dicta natus!
+                    </p>
+                </div>
+            </div>
+            <div class="mas">
+                <a href="contacto"><input type="buttom" value="Conocer mas..." class="todo_articulos"></a>
+            </div>
+            <br>
+        </div>
+    </main>
+    <footer>
+
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <img src="./resources/css/img/Logo Ferreteria.png" alt="">
+                </div>
+                <div class="terms">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit cum cumque velit libero officiis quam doloremque reprehenderit quae corporis! Delectus architecto officia praesentium atque laudantium, nam deleniti sapiente deserunt.</p>
+                </div>
+            </div>
+            <div class="box__footer">
+                <h2>Contactanos</h2>
+                <a href="https://www.google.com">Direccion</a>
+                <a href="#">Telefonos</a>
+                <a href="#">E-mail</a>
+                <a href="#"></a>
+            </div>
+
+            <div class="box__footer">
+                <h2>Compañia</h2>
+                <a href="nosotros">Acerca de</a>
+                <a href="#">Procesos</a>
+                <a href="#">Servicios</a>              
+            </div>
+
+            <div class="box__footer">
+                <h2>Redes Sociales</h2>
+                <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+            </div>
+
+        </div>
+
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2021 <b>Carvajal Materiales</b></p>
+        </div>
+    </footer>
+    </div>
+    <script src="./resources/JS/script.js"></script>
+</body>
+</html>

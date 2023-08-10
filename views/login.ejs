@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Carvajal Materiales</title>
+    <link rel="stylesheet" href="./resources/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+</head>
+<body>
+    <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido a Carvajal Materiales</h2>
+                <p>Si ya tienes cuenta inicia sesión aqui.</p>
+                <button class="sign-up-btn">Iniciar sesión</button>
+            </div>
+        </div>
+        <form class="formulario" action="/login" method="post">
+            <h2 class="create-account">Crear una cuenta</h2>
+            <div class="iconos">
+                <!-- <div class="border-icon">
+                    <i class='bx bx-log-in'></i>
+                </div> -->
+                <div class="border-icon">
+                    <img src="./resources/css/img/Logo Ferreteria.png" style="width: 140px;" alt="Carvajal Materiales">
+                </div>
+            </div>
+            <p class="cuenta-gratis">Crear cuenta</p>
+            <input type="text" name="name" placeholder="Nombre">
+            <input type="number" name="user" placeholder="Usuario">
+            <input type="password" name="pass" placeholder="Contraseña">
+            <input type="submit" value="Registrarse">
+        </form>
+    </div>
+    <div class="container-form sign-in">
+        <form action="/auth" method="POST" class="formulario">
+            <h2 class="create-account">Iniciar sesión</h2>
+            <div class="iconos">
+                <!-- <div class="border-icon">
+                    <i class='bx bx-log-in'></i>
+                </div> -->
+                <div class="border-icon">
+                    <img src="./resources/css/img/Logo Ferreteria.png" style="width: 140px;" alt="Carvajal Materiales">
+                </div>
+            </div>
+            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
+            <input type="number" name="user" placeholder="usuario">
+            <input type="password" name="pass" placeholder="Contraseña">
+            <input type="submit" value="Ingresar">
+        </form>
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Carvajal Materiales</h2>
+                <p>Si aun no tienes cuenta, registrate aqui.</p>
+                <button class="sign-in-btn">Registrarse</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="./resources/JS/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(typeof alert != "undefined"){ %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: <%= showConfirmButton %>,
+                timer:<%= timer%>
+            }).then(()=>{
+                window.location='/<%= ruta %>'
+            })
+        </script>
+    <%}%>
+</body>
+</html>b

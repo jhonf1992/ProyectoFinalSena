@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/estilosContacto.css">
+    <title>Home Carvajal Mat.</title>
+    <script src="https://kit.fontawesome.com/fb2678fbca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <Header id = "header">
+        <div class="container__header">
+            <div class="logo">
+                <img src="./resources/css/img/Logo Ferreteria.png" alt="">
+            </div>
+            <div class="container__nav">
+                <nav id ="nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="nosotros">Nosotros</a></li>
+                        <li><a href="productos">Productos</a></li>
+                        <!-- <li><a href="#">Facturar</a></li> -->
+                        <li><a href="contacto" class="select">Contacto</a></li>
+                        <!-- <li><a href="#">Despachos</a></li> -->
+                        <% if(login){ %>
+                            <li><a href="logout"><img src="./resources/css/img/mbrilogout_99583.png" alt="Salir" class="exit"></a></li>
+                            <% console.log('Logueado') %>
+                        <% }else{ console.log('No conectado');} %>                    </ul>
+                </nav>
+                <div class="btn__menu" id="btn_menu"><i class="fa-solid fa-bars"></i></div>
+
+            </div>
+        </div>
+    </Header>
+    <main class="principal"><br>
+        <section class="tituloMain">
+            <h1>Contactanos</h1>
+        </section>
+        <section class="bloquePrincipal">
+            <section class="contact">
+                <h2>Dirección: <h3>CL 14D # 43A - 34 Manzanares // Poblado Campestre / Candelaria</h3>
+                </h2>
+                <h2>Teléfonos: 
+                    <h3>
+                        Cel: 300-365-9340 - Tel: 062-595-8146
+                    </h3>
+                </h2>
+                <h2>E-mail
+                    <h3>carvajalmateriales@gmail.com</h3>
+                </h2>
+                <h2>Ubicacion:</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7965.568274142008!2d-76.46313382240213!3d3.4027632740025227!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a75decc564f1%3A0xabd7ff7f12628a5b!2sCarvajal%20Materiales!5e0!3m2!1ses!2sco!4v1687366788748!5m2!1ses!2sco" width="80%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <section class="socialMedia">
+                    
+                <div class="box__redes">
+                    <h1>Redes Sociales</h1>
+                    <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+                </div>
+            </section>
+        </section>    
+    </main>    
+    <footer>
+
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <img src="./resources/css/img/Logo Ferreteria.png" alt="">
+                </div>
+                <div class="terms">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit cum cumque velit libero officiis quam doloremque reprehenderit quae corporis! Delectus architecto officia praesentium atque laudantium, nam deleniti sapiente deserunt.</p>
+                </div>
+            </div>
+            <div class="box__footer">
+                <h2>Contactanos</h2>
+                <a href="https://www.google.com">Direccion</a>
+                <a href="#">Telefonos</a>
+                <a href="#">E-mail</a>
+                <a href="#"></a>
+            </div>
+
+            <div class="box__footer">
+                <h2>Compañia</h2>
+                <a href="#">Acerca de</a>
+                <a href="#">Procesos</a>
+                <a href="#">Servicios</a>              
+            </div>
+
+            <div class="box__footer">
+                <h2>Redes Sociales</h2>
+                <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+            </div>
+
+        </div>
+
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2021 <b>Carvajal Materiales</b></p>
+        </div>
+    </footer>
+    </div>
+    <script src="./resources/JS/script.js"></script>
+</body>
+</html>

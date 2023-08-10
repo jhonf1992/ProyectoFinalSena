@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/EstilosIndex.css">
+    <title>Home Carvajal Mat.</title>
+    <script src="https://kit.fontawesome.com/fb2678fbca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <Header id = "header">
+        <div class="container__header">
+            <div class="logo">
+                <img src="./resources/css/img/Logo Ferreteria.png" alt="">
+            </div>
+            <div class="container__nav">
+                
+                <nav id ="nav">
+                    <ul>
+                        <li><a href="/" class="select">Home</a></li>
+                        <li><a href="nosotros">Nosotros</a></li>
+                        <li><a href="productos">Productos</a></li>
+                        <!-- <li><a href="#">Facturar</a></li> -->
+                        <li><a href="contacto">Contacto</a></li>
+                        <!-- <li><a href="#">Despachos</a></li> -->
+                        <% if(login){ %>
+                            <li><a href="logout"><img src="./resources/css/img/mbrilogout_99583.png" alt="Salir" class="exit"></a></li>
+                            <% console.log('Logueado') %>
+                        <% }else{ console.log('No conectado');} %>
+                    </ul>
+                </nav>
+                <div class="btn__menu" id="btn_menu"><i class="fa-solid fa-bars"></i></div>
+
+            </div>
+        </div>
+    </Header>
+    <main><br>
+        <div class="container__all" id="container_all">
+            
+            <div class="cover">    
+                <div class="container__cover">
+                    <div class="container__info">
+                        <h1>Build Your</h1>
+                        <h2>Business</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, aperiam velit sit autem nesciunt reiciendis consectetur dignissimos repudiandae, unde assumenda temporibus impedit beatae porro. Enim necessitatibus obcaecati blanditiis laborum molestiae?</p>
+                        <input type="button" value="Get Started">
+                    </div>
+                    <div class="container__vector">
+                        <img src="./resources/css/img/vector-herramientas-removebg-preview.png" alt="">
+                    </div>
+                </div><br>
+                <div class="video" >
+                    <video controls src="./resources/css/img/WhatsApp Video 2020-09-01 at 10.40.47 PM.mp4"  ></video>
+                </div>
+            </div>    
+        
+        <div class="body__Page">
+            <div class="cover"></div>
+            <div class="container__article">
+                <div class="box__article"><img src="./resources/css/img/articulos/IMG-20210427-WA0105.jpg" alt="imagen1" class="articulos"></div>
+                <div class="box__article"><img src="./resources/css/img/articulos/IMG-20210427-WA0107.jpg" alt="articulo2" class="articulos"></div>
+                <div class="box__article" > <img src="./resources/css/img/articulos/IMG-20210427-WA0111.jpg" alt="articulo3" class="articulos"></div>
+                <div class="box__article" ><img src="./resources/css/img/articulos/IMG-20210427-WA0115.jpg" alt="articulo4" class="articulos"></div>
+                <div class="box__article" ><img src="./resources/css/img/articulos/IMG-20210427-WA0116.jpg" alt="articulo5" class="articulos"></div>
+                <div class="box__article" ><img src="./resources/css/img/articulos/IMG-20210427-WA0123.jpg" alt="articulo6" class="articulos"></div>
+                <div class="box__article" ><img src="./resources/css/img/articulos/IMG-20210427-WA0124.jpg" alt="articulo7" class="articulos"></div>
+                <div class="box__article" ><img src="./resources/css/img/articulos/IMG-20210427-WA0125.jpg" alt="articulo8" class="articulos"></div>
+
+                <div class="siguiente">
+                    <a href="./productos.html"><input type="buttom" value="Ver todos" class="todo_articulos"></a>
+                </div>
+            </div>
+
+            
+        </div>
+    </main>    
+    <footer>
+
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <img src="./resources/css/img/Logo Ferreteria.png" alt="">
+                </div>
+                <div class="terms">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit cum cumque velit libero officiis quam doloremque reprehenderit quae corporis! Delectus architecto officia praesentium atque laudantium, nam deleniti sapiente deserunt.</p>
+                </div>
+            </div>
+            <div class="box__footer">
+                <h2>Contactanos</h2>
+                <a href="https://www.google.com">Direccion</a>
+                <a href="#">Telefonos</a>
+                <a href="#">E-mail</a>
+                <a href="#"></a>
+            </div>
+
+            <div class="box__footer">
+                <h2>Compañia</h2>
+                <a href="#">Acerca de</a>
+                <a href="#">Procesos</a>
+                <a href="#">Servicios</a>              
+            </div>
+
+            <div class="box__footer">
+                <h2>Redes Sociales</h2>
+                <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+            </div>
+
+        </div>
+
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2021 <b>Carvajal Materiales</b></p>
+        </div>
+    </footer>
+    </div>
+    <script src="./resources/JS/script.js"></script>
+
+</body>
+</html>
