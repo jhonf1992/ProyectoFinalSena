@@ -38,14 +38,10 @@
             
         </section>
         <section class="inventario">
-            <div class="caja"><img src="./resources/css/ImagenesFerreteria/IMG-20210427-WA0035.jpg" alt="Pie amigo" class="inventario__imagen"><h3 class="inventario__nombre">Pie-Amigo</h3><a href="" class="precio">$ 2.500</a><p class="inventario_descripcion">Largo de 25Cm, pie de apollo para repisas en madera</p></div>
-            <div class="caja"><img src="./resources/css/ImagenesFerreteria/IMG-20210427-WA0036.jpg" alt="Sifon lavaplatos flexible" class="inventario__imagen"><h3 class="inventario__nombre">Sifón Flexible</h3><a href="" class="precio">$ 5.000</a><p class="inventario_descripcion">Sifón para lavaplatos, flexible de alta resistencia y flexibilidad.</p></div>
-            <div class="caja"><img src="./resources/css/ImagenesFerreteria/IMG-20210427-WA0037.jpg" alt="Cinta malla" class="inventario__imagen"><h3 class="inventario__nombre">Cinta Malla</h3><a href="" class="precio">$ 4.500</a><p class="inventario_descripcion">Cinta para obra blanca, adecuada para las grietas o uniones de panel yeso.</p></div>
-            <div class="caja"><img src="./resources/css/ImagenesFerreteria/IMG-20210427-WA0038.jpg" alt="Grifo" class="inventario__imagen"><h3 class="inventario__nombre">Grifo</h3><a href="" class="precio">$ 8.000</a><p class="inventario_descripcion">Grifo de alta calidad para lavaderos.</p></div>
-            <div class="caja"><img src="./resources/css/ImagenesFerreteria/IMG-20210427-WA0040.jpg" alt="Plafon ceramica" class="inventario__imagen"><h3 class="inventario__nombre">Plafón ceramico</h3><a href="" class="precio">$ 3.000</a><p class="inventario_descripcion">Plafón fabricado en ceramica de lata calidad para la decoracion de tu hogar</p></div>
-            <div class="caja"><img src="./resources/css/ImagenesFerreteria/IMG-20210427-WA0044.jpg" alt="Disco Abracol" class="inventario__imagen"><h3 class="inventario__nombre">Disco Abracol 4"</h3><a href="" class="precio">$ 5.500</a><p class="inventario_descripcion"></p>Disco de alta calidad, fabricado para corte de lamina.</div>
-            <div class="caja"><img src="./resources/css/ImagenesFerreteria/IMG-20210427-WA0048.jpg" alt="Interruptor y toma corriente" class="inventario__imagen"><h3 class="inventario__nombre">Interruptor mixto Uduke</h3><a href="" class="precio">$ 5.700</a><p class="inventario_descripcion">Interruptos mixto de alta calidad para la decoracion de interiores de tu hogar.</p></div>
-            <div class="caja"><img src="./resources/css/ImagenesFerreteria/IMG-20210427-WA0053.jpg" alt="" class="inventario__imagen"><h3 class="inventario__nombre">Interruptor doble marca Focci</h3><a href="" class="precio">$ 5.000</a><p class="inventario_descripcion">Interruptor doble marca econocima Focci, dos años de garantia.</p></div>
+            <%  results.forEach((producto) => {%>
+            <div class="caja"><img src="<%= producto.imagenproducto %>" alt="Pie amigo" class="inventario__imagen"><h3 class="inventario__nombre"><%= producto.nombreproducto %></h3><a href="" class="precio">$ <%= producto.precio %></a><p class="inventario_descripcion"><%= producto.descripcion %></p></div>
+            <% }); %>    
+        
 
         </section>
     </main>    

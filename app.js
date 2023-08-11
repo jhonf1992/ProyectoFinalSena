@@ -1,6 +1,7 @@
 const {urlencoded} = require('express');
 const express = require('express');
 const app = express();
+const router = express.Router();
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
@@ -150,20 +151,20 @@ app.get('/nosotros', (req, res) =>{
         })
     }
 })
-app.get('/productos', (req, res) =>{
-    if(req.session.loggedin){
-        res.render('productos', {
-            login: true,
-            name: req.session.Nombre
-        });
-    }else{
-        res.render('login', {
-            login: false,
-            name: 'Debe iniciar session',
+// app.get('/productos', (req, res) =>{
+//     if(req.session.loggedin){
+//         res.render('productos', {
+//             login: true,
+//             name: req.session.Nombre
+//         });
+//     }else{
+//         res.render('login', {
+//             login: false,
+//             name: 'Debe iniciar session',
             
-        })
-    }
-})
+//         })
+//     }
+// })
 
 // // logout
 
@@ -174,6 +175,36 @@ app.get('/logout', (req, res) =>{
 })
 
 
+
+//ROUTER: VAMOS A ASIGNAR LAS RUTAS PARA EL CRUD
+
+app.get('/productos', (req, res) =>{
+    
+    connection.query('SELECT * FROM producto', (error, results)=>{
+        if (error) {
+            throw error; // tambien se puede usar console.log('El error es : ' + error); es lo mismo    
+        } else {
+            res.render('productos', {results:results});
+        }
+    });
+});
+
+// app.get('/productos', (req, res) =>{
+//     if(req.session.loggedin){
+//         res.render('productos', {
+//             login: true,
+//             name: req.session.Nombre
+//         });
+//     }else{
+//         res.render('login', {
+//             login: false,
+//             name: 'Debe iniciar session',
+            
+//         })
+//     }
+// })
+
+module.exports = router;
 
 app.listen(3000, (req, res) => {
     console.log('SERVER RUNNING IN THE http://localhost:3000');
