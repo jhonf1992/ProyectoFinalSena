@@ -180,17 +180,39 @@ app.get('/logout', (req, res) =>{
 
 //ROUTER: VAMOS A ASIGNAR LAS RUTAS PARA EL CRUD
 
-app.get('/productos', (req, res) =>{
+// app.get('/productos', (req, res) =>{
     
-    connection.query('SELECT * FROM producto', (error, results)=>{
-        if (error) {
-            throw error; // tambien se puede usar console.log('El error es : ' + error); es lo mismo    
-        } else {
-            res.render('productos', {results:results});
-        }
-    });
-});
+//     connection.query('SELECT * FROM producto', (error, results)=>{
+//         if (error) {
+//             throw error; // tambien se puede usar console.log('El error es : ' + error); es lo mismo    
+//         } else {
+//             res.render('productos', {results:results});
+//         }
+//     });
+// });
 
+app.get('/productos', (req, res) =>{
+    if(req.session.loggedin){
+        console.log(req.session.loggedin + ' yo soy loggedin');
+        connection.query('SELECT * FROM producto', (error, results) =>{
+            if (error) {
+                console.log(error);
+            } else {
+                res.render('productos', {results:results});
+                login = true
+                console.log(login);
+                
+            }
+        });
+        
+    }else{
+        res.render('login', {
+            login: false,
+            name: 'Debe iniciar session',
+            
+        })
+    }
+})
 
 module.exports = router;
 

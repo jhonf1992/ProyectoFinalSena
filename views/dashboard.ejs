@@ -22,13 +22,16 @@
                 
                 <nav id ="nav">
                     <ul>
-                        <li><a href="/" >Home</a></li>
-                        <li><a href="nosotros">Nosotros</a></li>
-                        <li><a href="productos"  >Productos</a></li>
-                        <li><a href="dashboard" class="select">Dashboard</a></li>
-                        <li><a href="contacto">Contacto</a></li>
+                        <li><a href="/" style="text-decoration:none;" >Home</a></li>
+                        <li><a href="nosotros" style="text-decoration:none;" >Nosotros</a></li>
+                        <li><a href="productos" style="text-decoration:none;">Productos</a></li>
+                        <li><a href="dashboard" class="select" style="text-decoration:none;">Dashboard</a></li>
+                        <li><a href="contacto" style="text-decoration:none;" >Contacto</a></li>
                         <!-- <li><a href="#">Despachos</a></li> -->
-                        <li><a href="login"><img src="./resources/css/img/mbrilogout_99583.png" alt="Salir" class="exit"></a></li>
+                        <% if(login){ %>
+                            <li><a href="logout"><img src="./resources/css/img/mbrilogout_99583.png" alt="Salir" class="exit"></a></li>
+                            <% console.log('Logueado en el dashboard') %>
+                        <% }else{ console.log('No conectado');} %>
                     </ul>
                 </nav>
                 <div class="btn__menu" id="btn_menu"><i class="fa-solid fa-bars"></i></div>
@@ -47,6 +50,7 @@
                         <th scope="col">Nombre Producto</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Stock</th>
+                        <th scope="col">Categoria</th>
                         <th scope="col">Acciones</th>
                     </tr>
                     <tbody>
@@ -56,6 +60,7 @@
                             <td><%= producto.nombreproducto  %></td>
                             <td><%= producto.precio  %></td>
                             <td><%= producto.stock  %></td>
+                            <td><%= producto.categoria %></td>
                             <td>
                                 <a href="/edit/<%= producto.idproducto %>" class="btn btn-outline-info">Editar</a>
                                 <a href="/delete/<%= producto.idproducto %>" class="btn btn-outline-danger">Borrar</a>
@@ -108,7 +113,7 @@
         </div>
     </footer>
     </div>
-    <script src="./resources/css/script.js"></script>
+    <script src="./resources/JS/script.js"></script>
 </body>
 </html>
 

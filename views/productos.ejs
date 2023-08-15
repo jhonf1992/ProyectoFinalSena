@@ -25,7 +25,10 @@
                         <li><a href="dashboard">Dashboard</a></li>
                         <li><a href="contacto">Contacto</a></li>
                         <!-- <li><a href="#">Despachos</a></li> -->
-                        <li><a href="login"><img src="./resources/css/img/mbrilogout_99583.png" alt="Salir" class="exit"></a></li>
+                        <% console.log(login + 'llamado desde el front de productos'); %>
+                        <% if(login){ %>
+                            <li><a href="logout"><img src="./resources/css/img/mbrilogout_99583.png" alt="Salir" class="exit"></a></li>
+                        <% } %>    
                     </ul>
                 </nav>
                 <div class="btn__menu" id="btn_menu"><i class="fa-solid fa-bars"></i></div>
@@ -87,6 +90,6 @@
         </div>
     </footer>
     </div>
-    <script src="./resources/css/script.js"></script>
+    <script src="./resources/JS/script.js"></script>
 </body>
 </html>
