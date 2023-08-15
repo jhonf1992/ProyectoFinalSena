@@ -12,7 +12,7 @@ dotenv.config({path:"./env/.env"});
 app.use('/resources', express.static('public'));
 app.use('/resources', express.static(__dirname + '/public'));
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs'); // MOTOR DE PLANTILLA DEFINIDO
 
 const bcryptjs = require('bcryptjs');
 
@@ -105,6 +105,8 @@ app.post('/auth', async (req, res) => {
     }
 })
 
+
+
 // // Autenticacion de las paginas
 
 app.get('/', (req, res) =>{
@@ -189,23 +191,17 @@ app.get('/productos', (req, res) =>{
     });
 });
 
-// app.get('/productos', (req, res) =>{
-//     if(req.session.loggedin){
-//         res.render('productos', {
-//             login: true,
-//             name: req.session.Nombre
-//         });
-//     }else{
-//         res.render('login', {
-//             login: false,
-//             name: 'Debe iniciar session',
-            
-//         })
-//     }
-// })
 
 module.exports = router;
 
 app.listen(3000, (req, res) => {
     console.log('SERVER RUNNING IN THE http://localhost:3000');
 });
+
+
+
+// CREACION DEL DASHBOARD
+
+
+app.use('/' , require('./router'));
+

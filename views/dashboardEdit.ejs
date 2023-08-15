@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./resources/css/estilosProductos.css">
+    <link rel="stylesheet" href="./resources/css/dashboard.css">
+    <title>Dashboard Edit Carvajal Mat.</title>
+    <script src="https://kit.fontawesome.com/fb2678fbca.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- <Header id = "header">
+        <div class="container__header">
+            <div class="logo">
+                <a href="/"><img src="./resources/css/img/Logo Ferreteria.png" alt="logo"></a>
+            </div>
+            <div class="container__nav">
+                
+                <nav id ="nav">
+                    <ul>
+                        <li><a href="/" >Home</a></li>
+                        <li><a href="nosotros">Nosotros</a></li>
+                        <li><a href="productos">Productos</a></li>
+                        <li><a href="dashboard" class="select">Dashboard</a></li>
+                        <li><a href="contacto">Contacto</a></li>
+                        
+                        <li><a href="login"><img src="./resources/css/img/mbrilogout_99583.png" alt="Salir" class="exit"></a></li>
+                    </ul>
+                </nav>
+                <div class="btn__menu" id="btn_menu"><i class="fa-solid fa-bars"></i></div>
+
+            </div>
+        </div>
+    </Header> -->
+    <main class="productos"><br>
+            
+        <% if(producto){ %>
+            <div class="container mt-4">
+                <div class="card border-secondary">
+                    <div class="card-header">Nuevo Registro</div>
+                    <div class="card-body">
+                    <form action="/update" method="POST">
+                        <input id="idproducto" name="idproducto" value="<%= producto.idproducto  %>" hidden>  
+                        <div class="mb-3">
+                            <label for="user" class="form-label">Nombre producto</label>
+                            <input type="text" class="form-control" id="nombreproducto" name="nombreproducto" value="<%= producto.nombreproducto  %>" tabindex="1">
+                            <label for="user" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="precio" name="precio" value="<%= producto.precio  %>" tabindex="1">
+                            <label for="user" class="form-label">Stock</label>
+                            <input type="number" class="form-control" id="stock" name="stock" value="<%= producto.stock  %>" tabindex="1">
+                            <label for="user" class="form-label">Descripción</label>
+                            <input type="text" class="form-control" id="descripcion" name="descripcion" value="<%= producto.descripcion  %>" tabindex="1">
+                            <label for="user" class="form-label">Fecha Registro</label>
+                            <input type="date" class="form-control" id="fecharegistro" name="fecharegistro" value="<%= producto.fecharegistro  %>" tabindex="1">
+                            <label for="user" class="form-label">Imagen</label>
+                            <input type="file" class="form-control" id="imagenproducto" name="imagenproducto" value="<%= producto.imagenproducto  %>" tabindex="1">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="user" class="form-label">Categoria</label>
+                            <select id="categoria" name="categoria" class="form-select" tabindex="2">
+                            <option <%= producto.categoria=='1' ? "selected": ""  %> value="1">1</option>
+                            <option <%= producto.categoria=='2' ? "selected": ""  %> value="2">2</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-warning" tabindex="5">Guardar</button>
+                        <a href="/dashboard" class="btn btn-secondary">Cancelar</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </main> 
+    <!-- <footer>
+
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <img src="./resources/css/img/Logo Ferreteria.png" alt="">
+                </div>
+                <div class="terms">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit cum cumque velit libero officiis quam doloremque reprehenderit quae corporis! Delectus architecto officia praesentium atque laudantium, nam deleniti sapiente deserunt.</p>
+                </div>
+            </div>
+            <div class="box__footer">
+                <h2>Contactanos</h2>
+                <a href="https://goo.gl/maps/zt7guVA1s6Ze14v79" target="_blank">Dirección</a>
+                <a href="/contacto">Telefonos</a>
+                <a href="/contacto">E-mail</a>
+                <a href="#"></a>
+            </div>
+
+            <div class="box__footer">
+                <h2>Compañia</h2>
+                <a href="nosotros">Acerca de</a>
+                <a href="#">Procesos</a>
+                <a href="#">Servicios</a>              
+            </div>
+
+            <div class="box__footer">
+                <h2>Redes Sociales</h2>
+                <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                <a target="_blank" href="https://wa.me/3057455799"><i class="fa-brands fa-square-whatsapp fa-lg"></i> WhatsApp</a>
+                <a target="_blank" href="https://www.instagram.com/carvajalmateriales/"><i class="fab fa-instagram-square"></i> Instagram</a>
+            </div>
+
+        </div>
+
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2021 <b>Carvajal Materiales</b></p>
+        </div>
+    </footer> -->
+    </div>
+    <script src="./resources/css/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
