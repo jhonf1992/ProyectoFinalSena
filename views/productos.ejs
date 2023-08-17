@@ -43,7 +43,7 @@
         </section>
         <section class="inventario">
             <%  results.forEach((producto) => {%>
-            <div class="caja"><img src="<%= producto.imagenproducto %>" alt="Pie amigo" class="inventario__imagen"><h3 class="inventario__nombre"><%= producto.nombreproducto %></h3><a href="" class="precio">$ <%= producto.precio %></a><p class="inventario_descripcion"><%= producto.descripcion %></p></div>
+            <div class="caja"><img src="<%= producto.imagenproducto %>" alt="<%= producto.nombreproducto %>" class="inventario__imagen"><h3 class="inventario__nombre"><%= producto.nombreproducto %></h3><a href="" class="precio">$ <%= producto.precio %></a><p class="inventario_descripcion"><%= producto.descripcion %></p></div>
             <% }); %>    
         
 
